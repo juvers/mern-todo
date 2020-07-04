@@ -10,3 +10,11 @@ app.use((req, res, next) => {
     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
     next();
 });
+
+app.use((req, res, next) => {
+    res.send('Welcome to my TODO App');
+});
+
+app.listen(port, () => {
+    console.log(`Server running on port ${port}`)
+});
